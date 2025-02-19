@@ -1,4 +1,4 @@
-from diart import SpeakerDiarization
+from diart import SpeakerDiarization, SpeakerDiarizationConfig
 from diart.inference import StreamingInference
 from diart.sources import AudioSource
 from rx.subject import Subject

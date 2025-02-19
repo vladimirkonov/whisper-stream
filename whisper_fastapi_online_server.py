@@ -57,7 +57,7 @@ CHANNELS = 1
 SAMPLES_PER_SEC = SAMPLE_RATE * int(args.min_chunk_size)
 BYTES_PER_SAMPLE = 2  # s16le = 2 bytes per sample
 BYTES_PER_SEC = SAMPLES_PER_SEC * BYTES_PER_SAMPLE
-MAX_BYTES_PER_SEC = 32000 * 5  # 5 seconds of audio at 32 kHz
+MAX_BYTES_PER_SEC = 32000 * 5 # 5 seconds of audio at 32 kHz
 
 if args.diarization:
     from src.diarization.diarization_online import DiartDiarization

@@ -156,14 +156,16 @@ def add_shared_args(parser):
 def backend_factory(args):
     backend = args.backend
     if backend == "openai-api":
-        logger.debug("Using OpenAI API.")
+        logger.info("Using OpenAI API.")
         asr = OpenaiApiASR(lan=args.lan)
     else:
         if backend == "faster-whisper":
+            logger.info("Using Faster Whisper.")
             asr_cls = FasterWhisperASR
         elif backend == "mlx-whisper":
             asr_cls = MLXWhisper
         else:
+            logger.info("Using Simple Whisper.")
             asr_cls = WhisperTimestampedASR
 
         # Only for FasterWhisperASR and WhisperTimestampedASR
