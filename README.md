@@ -112,3 +112,5 @@ No additional front-end libraries or frameworks are required. The WebSocket logi
 
 This project builds upon the foundational work of the Whisper Streaming project. We extend our gratitude to the original authors for their contributions.
 
+sudo docker build -t whisper .
+sudo docker run --gpus all --rm -p 8000:8000 whisper
